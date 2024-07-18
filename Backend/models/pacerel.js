@@ -3,7 +3,7 @@ const mongoose=require("mongoose");
 const parcelSchema=mongoose.Schema({
     from:{type:String,require:true},
     to:{type:String,require:true},
-    sendername:{type:String,require},
+    sendername:{type:String,require:true},
     recipientname:{type:String,require:true},
     senderemail:{type:String,require:true},
     recipientemail:{type:String,require:true},
