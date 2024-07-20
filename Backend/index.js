@@ -15,9 +15,9 @@ app.use(cors())
 
 
 // ROUTE
-app.use("/auth",authRoute)
-app.use("/users",userRoute)
-app.use("/Parcel",ParcelRoute)
+app.use("/Api/V1/auth",authRoute)
+app.use("/Api/V1/users",userRoute)
+app.use("/Api/V1/Parcel",ParcelRoute)
 
 
 //DATABASE CONNECTION

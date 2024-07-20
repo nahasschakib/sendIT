@@ -17,7 +17,7 @@ const user =require("../models/user")
 
  const getAllUsers=async(req,res)=>{
     try{
-        const users =await users.find.sort({createdAt:-1});
+        const users =await users.find().sort({createdAt:-1});
         res.status(200).json(error)
     }catch(error){
         res.status(500).json(error)
