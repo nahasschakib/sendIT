@@ -1,5 +1,6 @@
 const express= require('express');
 const router=express.Router();
+const {createParcel,getAllParcels,upDateParcel,getOneParcel,getUsersParcel,deleteParcel}=require("../controllers/parcel")
 
 //AD PARCEL
 

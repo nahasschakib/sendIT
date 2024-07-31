@@ -1,10 +1,10 @@
 const nodemailer =require("nodemailer");
 const dotenv =require("dotenv");
-const user = require("../../Backend/models/user");
+
 
 dotenv.config();
 
-function createTransporter(cinfig){
+function createTransporter(config){
     const transporter =nodemailer.createTransporter(config);
     return transporter;
 }
@@ -28,4 +28,6 @@ const sendMail=async(messageoption)=>{
         }
     );
 
-}
+};
+
+module.exports=sendMail;

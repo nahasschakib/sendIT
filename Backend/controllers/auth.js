@@ -1,4 +1,4 @@
-const crypto = require("crypto-js");
+const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 const user =require("../models/user");
 const dotenv =require("dotenv");
@@ -7,7 +7,7 @@ dotenv.config()
 
  const registerUser= async (req,res)=>{
     const newUser = user({
-    fullname:req.body.fullname,
+    fullName:req.body.fullName,
     email:req.body.email,
     age:req.body.age,
     country:req.body.country,

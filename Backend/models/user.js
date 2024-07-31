@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 
 const UserSchema=mongoose.Schema({
-    fullname:{type:String ,require:true},
+    fullName:{type:String ,require:true},
     email:{type:String ,require:true},
     country:{type:String ,require:true},
     address:{type:String ,require:true},

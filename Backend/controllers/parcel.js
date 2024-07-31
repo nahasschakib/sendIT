@@ -1,9 +1,9 @@
-const Parcel=require("../models/pacerel");
-const {}=require("../controllers/parcel")
+const Parcel=require("../models/parcel");
+
 
 //CREATE PARCEL
 
-export const createParcel=async(req,res)=>{
+ const createParcel=async(req,res)=>{
     try{
         const newParcel=Parcel(req.body);
         const Parcel=await newParcel.save();
@@ -15,7 +15,7 @@ export const createParcel=async(req,res)=>{
 
 //GET ALL PARCEL
 
-export const getAllParcels=async(req,res)=>{
+ const getAllParcels=async(req,res)=>{
     try{
         const Parcel =await Parcel.find().sort({createdAt:-1});
         res.status(201).json(Parcel);
@@ -25,7 +25,7 @@ export const getAllParcels=async(req,res)=>{
 };
 
 //UPDATE PARCEL
-export const upDateParcel =async(req,res)=>{
+ const upDateParcel =async(req,res)=>{
     try{
         const Parcel=await Parcel.findById(req.params.id);
         res.status(201).json(Parcel)
@@ -36,7 +36,7 @@ export const upDateParcel =async(req,res)=>{
 
 //GET ONE PARCEL
 
-export const getOneParcel = async(req,res)=>{
+ const getOneParcel = async(req,res)=>{
     try{
         const pacerel=await Parcel.findById(req.params.id);
         res.status(201).json(Parcel);
@@ -46,7 +46,7 @@ export const getOneParcel = async(req,res)=>{
 };
 //GET USERS PARCEL
 
-export const getUsersParcel=async(req,res)=>{
+ const getUsersParcel=async(req,res)=>{
     try{
         const Parcel =await Parcel.find({senderemail:req.body.email}).sort({createdAt:-1})
     }catch(err){
@@ -56,7 +56,7 @@ export const getUsersParcel=async(req,res)=>{
 
 //DELETE PARCEL
 
-export const deleteParcel =async(req,res)=>{
+ const deleteParcel =async(req,res)=>{
     try{
         const Parcel=await Parcel.findByIdAndDelete(req.body.id)
         res.status(201).json("Parcel has been deleted successfully")
